@@ -40,6 +40,9 @@
                     console.log(`id: ${item.id}, name: ${item.name}, ${item.price}円, 残り${item.stock}個`);
                 });
                     // 課題4-1. ここにコードを書く
+                    for(let i=0;i<list.length;i++){
+                    console.log("商品番号: "+list[i].id+", 商品名: "+list[i].name+", 金額: "+list[i].price+", 在庫数: "+list[i].stock);
+                }
                     console.log(""); // 空行の出力
                 }
                 
@@ -66,8 +69,10 @@
             
 
             // 課題4-1. ここにコード書く
-            const item_list = items.map(item => new Item(item.id, item.name, item.price, item.stock));
-        Item.showItemList(item_list);
+            for(let i=0;i<item_list.length;i++){
+                item_list[i]=new Item(items[i].name,items[i].price,items[i].stock);
+                console.log("id: "+item_list[i].id+", name: "+item_list[i].name+", "+item_list[i].price+"円, 残り"+item_list[i].stock+"個")
+                }
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
