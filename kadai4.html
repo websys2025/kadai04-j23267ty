@@ -63,8 +63,11 @@
             // 配列のオブジェクト作成
             const item_list = new Array(items.length);
             const btn = new Array(items.length);
+            
 
             // 課題4-1. ここにコード書く
+            const item_list = items.map(item => new Item(item.id, item.name, item.price, item.stock));
+        Item.showItemList(item_list);
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
